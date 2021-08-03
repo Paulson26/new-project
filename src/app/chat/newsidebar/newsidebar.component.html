@@ -1,0 +1,53 @@
+
+
+
+
+
+
+
+
+
+  
+        <!-- Row start -->
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+                    <!-- Row start -->
+                   
+                            <div class="users-container container-fluid bg">
+                            
+                            
+                                <div class="chat-search-box">
+                                 
+                                  
+         
+                                   
+            
+                                    <div class="input-group" >
+                                        <input class="form-control" [(ngModel)]="UserNameFilter"  (keyup)="FilterFn()" placeholder="Search">
+                                        <div class="input-group-btn">
+                                            <button type="button" class="btn btn-info">
+                                                <i class="fa fa-search"></i>
+                                            </button>
+                                          
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul class="users">
+                                    <li class="person" data-chat="person1" *ngFor = "let user of users">
+                                    <a [routerLink] = "['/chat',user.id]" class="flip">
+                                        <div class="user">
+                                            <img src="https://www.vhv.rs/dpng/d/148-1486437_smiling-businessman-png-transparent-png.png" alt="Retail Admin">
+                                            
+                                        </div>
+                                        <p class="name-time">
+                                            <span class="name"><b style="font-size:15px;">{{user.username}}</b> </span>
+                                        
+                                        </p>
+                                        </a>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                    
+

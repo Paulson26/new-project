@@ -1,0 +1,59 @@
+
+  <div class="selected-user bg ">
+      <span><span class="name">{{ singlesideuser.username }}</span></span>
+  </div>
+  <div class="chat-container container-fluid bg">
+      <ul class="chat-box chatContainerScroll">
+         
+   <div class="msg_history">
+   <div class="incoming_msg" *ngFor="let msg of messages">
+	<div *ngIf="msg.sentby != currentUser.id; else elseBlock">
+	 <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+	 <div class="received_msg">
+	   <div class="received_withd_msg">
+		 <p>{{msg.message}}</p>
+		 <span class="time_date">{{msg.time}}</span></div>
+	 </div>
+   </div>
+   <ng-template #elseBlock>
+	<div class="outgoing_msg">
+		<div class="sent_msg">
+		  <p>{{msg.message}} </p>
+		  <span class="time_date">{{msg.time}}</span> </div>
+		  </div>
+	   
+	</ng-template>
+   
+   </div>
+   </div>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>	
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+
+       
+      </ul>
+      <div class="form-group mt-3 mb-0">
+       
+          <textarea class="form-control" rows="3" [(ngModel)]="msg.message" placeholder="Type your message here..."></textarea>
+        </div>
+        
+            <div class="col-md-12 text-first">
+         
+              <button  class=" btn btn-dark bg-success btn-sm" (click)="send()">SEND</button>
+            </div>
+        
+          
+     
+  </div>
+
+<!-- Row end -->
+
+
+<!-- Row end -->

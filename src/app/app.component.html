@@ -1,0 +1,29 @@
+<mat-toolbar color="dark" class="">
+  <div><a>Chat App </a></div>
+  <span class="nav-tool-items" *ngIf="!isLoggedIn">
+    <a mat-button mat-raised-button routerLink="signin" routerLinkActive="active current">Signin</a>
+    <a mat-button mat-raised-button routerLink="register" routerLinkActive="active current">Signup</a>
+  </span>
+  <span class="nav-tool-items" *ngIf="isLoggedIn">
+
+    <a mat-button routerLink="signin" routerLinkActive="active current">{{ user.username }}</a>
+    <a mat-button mat-raised-button style="" (click)="logout()" routerLinkActive="active current">Logout</a>
+                       
+                       
+                       <a href="/updateprofile"> 
+                                <span class="btn btn-default buttons title bg-warning">
+                                          UPDATE YOUR PROFILE
+                                          </span>
+                                    </a>
+                                    
+
+  </span>
+</mat-toolbar>
+<router-outlet></router-outlet>
+
+  
+
+    
+        
+          
+          
