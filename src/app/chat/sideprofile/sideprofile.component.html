@@ -1,0 +1,73 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+
+<div class="profile-sidebar container-fluid bg">
+	<!-- SIDEBAR USERPIC -->
+	<div *ngIf="singlesideuserdetails;else elseBlock">
+	<div class="profile-userpic">
+        <img src="https://icon2.cleanpng.com/20180626/ehy/kisspng-avatar-user-computer-icons-software-developer-5b327cc951ae22.8377289615300354013346.jpg" class="img-responsive" alt="">
+    </div>
+    <!-- END SIDEBAR USERPIC -->
+    <!-- SIDEBAR USER TITLE -->
+    <div class="profile-usertitle">
+        <div class="profile-usertitle-name">
+            {{ singlesideuser.username }}
+        </div>
+        <div class="profile-usertitle-job">
+            {{singlesideuser.email}}
+        </div>
+    </div>
+    <div class="profile-usertitle">
+        <div class="profile-usertitle-name">
+            Nickname: {{singlesideuserdetails.nickname}}
+        </div>
+        <div class="profile-usertitle-job">
+            Gender: {{singlesideuserdetails.gender}}
+        </div>
+		<div class="profile-usertitle-name">
+            DOB: {{singlesideuserdetails.dob}}
+        </div>
+        <div class="profile-usertitle-job">
+            PhoneNumber: {{singlesideuserdetails.phonenumber}}
+        </div>
+		<div class="profile-usertitle-job">
+            Language: {{singlesideuserdetails.Language}}
+        </div>
+    </div>
+
+	</div>
+	<ng-template #elseBlock>
+		<div class="profile-userpic">
+			<img src="https://www.vhv.rs/dpng/d/148-1486437_smiling-businessman-png-transparent-png.png" class="img-responsive" alt="">
+		</div>
+		<!-- END SIDEBAR USERPIC -->
+		<!-- SIDEBAR USER TITLE -->
+		<div class="profile-usertitle">
+			<div class="profile-usertitle-name">
+				{{ singlesideuser.username }}
+			</div>
+			<div class="profile-usertitle-job">
+				{{singlesideuser.email}}
+			</div>
+		</div>
+		<div class="profile-usertitle">
+			
+			<div class="profile-usertitle-job">
+				Gender: MALE
+			</div>
+			
+			<div class="profile-usertitle-job">
+				PhoneNumber:233333333334
+			</div>
+			<div class="profile-usertitle-job">
+				Language:ENGLISH
+			</div>
+		</div>
+	
+
+	</ng-template>
+
+</div>
